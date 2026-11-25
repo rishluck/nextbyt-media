@@ -1,0 +1,79 @@
+<html><head><style>@font-face{font-family:'Cormorant';src:url(cormorant-garamond-latin-500-italic.woff2);font-style:italic;font-weight:500}
+@font-face{font-family:'Josefin';src:url(josefin-sans-latin-300-normal.woff2);font-weight:300}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;background:#0d0a09;color:#f5f0ea;font-family:'DM Sans';overflow:hidden;position:relative}
+#glow{position:absolute;width:1400px;height:1400px;border-radius:50%;background:radial-gradient(circle,rgba(207,100,41,.26),rgba(207,100,41,0) 62%);left:-160px;top:300px}
+.scene{position:absolute;inset:0;opacity:0}
+em{font-family:'Cormorant';font-style:italic;font-weight:500;color:#d4a070;font-size:1.12em;letter-spacing:-2px}
+.tag{font-family:'Josefin';font-weight:300;letter-spacing:10px;font-size:34px;color:#f0a46e;text-transform:uppercase}
+.endc{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 90px}
+.endc h2{font-weight:500;font-size:120px;line-height:1.05;letter-spacing:-4px;margin-top:70px}
+.word{font-family:'Josefin';font-weight:300;letter-spacing:14px;font-size:56px;color:#fff;margin-top:40px}.word span{color:#d4a070}
+.url{margin-top:70px;background:linear-gradient(#ee8a4c,#cf6429);color:#0d0a09;border-radius:999px;padding:26px 60px;font-size:48px;font-weight:500;box-shadow:0 20px 60px rgba(207,100,41,.4)}
+.sub{margin-top:40px;font-size:36px;font-weight:300;color:#9a8a82}
+
+#s1{display:flex;flex-direction:column;justify-content:center;padding:0 90px}
+#s1 h1{font-weight:500;font-size:150px;line-height:1.05;letter-spacing:-5px;margin-top:30px}
+#s2{display:flex;flex-direction:column;align-items:center;padding-top:250px}
+.lab{font-family:'Josefin';letter-spacing:10px;font-size:32px;text-transform:uppercase;border-radius:999px;padding:14px 36px;border:1px solid #2a2018;background:#141010;color:#9a8a82}
+.lab.on{background:linear-gradient(#ee8a4c,#cf6429);color:#0d0a09;border-color:transparent}
+.labs{display:flex;gap:24px}
+.br{margin-top:50px;width:900px;height:1080px;border-radius:28px;overflow:hidden;position:relative;border:1px solid #2a2018;box-shadow:0 40px 120px rgba(0,0,0,.6)}
+.bar{height:64px;background:#1c1614;display:flex;align-items:center;gap:14px;padding:0 28px}
+.bar i{width:18px;height:18px;border-radius:50%;background:#3a2e28}
+.bar .addr{margin-left:24px;flex:1;height:36px;border-radius:999px;background:#0d0a09;color:#5a4a42;font-size:20px;display:flex;align-items:center;padding-left:24px}
+.pg{position:absolute;left:0;right:0;top:64px;bottom:0}
+.old{background:#e9e6e1;color:#333;font-family:'Times New Roman',serif;padding:24px 30px;text-align:center}
+.old .nav{font-size:18px;color:#555;text-decoration:underline;word-spacing:14px}
+.old .ban{margin:22px 0;background:#8a8580;color:#fff;font-size:44px;font-weight:bold;padding:26px}
+.old p{font-size:19px;line-height:1.35;margin:12px 0;color:#444}
+.old .row{display:flex;gap:14px;margin:18px 0}.old .row div{flex:1;height:150px;background:#c9c5bf;border:2px dashed #999}
+.old .tiny{font-size:16px;color:#777;text-decoration:underline}
+.new{background:#0d0a09;padding:56px 56px;clip-path:inset(0 0 0 100%)}
+.new .nw{display:flex;justify-content:space-between;align-items:center;font-family:'Josefin';letter-spacing:7px;font-size:24px;color:#f5f0ea}
+.new .nw span{font-size:20px;color:#9a8a82;letter-spacing:4px}
+.new h3{margin-top:90px;font-weight:500;font-size:96px;line-height:1.02;letter-spacing:-3.5px}
+.new .p{margin-top:30px;font-size:30px;font-weight:300;color:#9a8a82;line-height:1.4}
+.new .b{margin-top:44px;display:inline-flex;align-items:center;gap:18px;background:linear-gradient(#ee8a4c,#cf6429);color:#0d0a09;border-radius:999px;padding:12px 12px 12px 34px;font-size:28px;font-weight:500}
+.new .b b{width:50px;height:50px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.new .tiles{margin-top:70px;display:flex;gap:22px}.new .tiles div{flex:1;height:250px;border-radius:24px;background:linear-gradient(160deg,#3a2418,#141010);border:1px solid #2a2018;position:relative}
+.new .tiles div:after{content:'';position:absolute;left:50%;top:50%;width:70px;height:96px;margin:-48px 0 0 -35px;border-radius:12px;background:linear-gradient(#d4a070,#a86030)}
+.wipe{position:absolute;top:64px;bottom:0;width:6px;background:#d4a070;box-shadow:0 0 40px #cf6429;opacity:0}
+.demo{margin-top:34px;font-family:'Josefin';letter-spacing:6px;font-size:24px;color:#9a8a82;text-transform:uppercase}
+.calls{margin-top:50px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center;width:900px}
+.calls div{border:1px solid #cf6429;color:#f0a46e;border-radius:999px;padding:16px 30px;font-size:30px;opacity:0}
+</style></head><body><div id="glow"></div>
+<div class="scene" id="s1"><div class="tag">Website glow-up</div><h1><span style="display:block">Same business.</span><span style="display:block"><em>New</em> website.</span></h1></div>
+<div class="scene" id="s2"><div class="labs"><div class="lab on" id="lb">Before</div><div class="lab" id="la">After</div></div>
+<div class="br"><div class="bar"><i></i><i></i><i></i><div class="addr">hollowoak-demo.co.uk</div></div>
+<div class="pg old"><div class="nav">Home About Us Products Gallery News Links FAQ Contact Blog</div><div class="ban">WELCOME TO OUR WEBSITE!!!</div>
+<p>Hollow Oak Candle Co. was established many years ago and we are a family run business who make candles and also other products for the home and gifts.</p>
+<p>Please browse our website using the links above. Click here for our products. Click here for our prices. Click here to contact us.</p>
+<div class="row"><div></div><div></div><div></div></div><p>Opening hours: please call. Orders by email or phone only. Please allow time for replies.</p><div class="tiny">Click here &nbsp; Click here &nbsp; Click here &nbsp; Click here</div>
+<div class="row"><div></div><div></div></div><p>Copyright. All rights reserved. Last updated a while ago.</p></div>
+<div class="pg new" id="nw"><div class="nw">HOLLOW OAK<span>SHOP &nbsp; GIFTS &nbsp; STORY</span></div><h3>Slow evenings,<br><em>hand poured.</em></h3><div class="p">Small batch candles made in the Midlands. Order by 18:00 for next day dispatch.</div>
+<div class="b">Shop the collection<b>&rarr;</b></div><div class="tiles"><div></div><div></div><div></div></div></div>
+<div class="wipe" id="wp"></div></div>
+<div class="demo">Demo brand, made up for this video</div>
+<div class="calls" id="calls"><div>Clear headline</div><div>One obvious button</div><div>Built for phones</div></div></div>
+<div class="scene endc" id="s3"><div><svg viewBox="0 0 100 100" width="180" height="180" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#eacca8"/><stop offset="50%" stop-color="#d4a070"/><stop offset="100%" stop-color="#a86030"/></linearGradient></defs><path d="M4 22 L4 4 L22 4" fill="none" stroke="url(#g)" stroke-width="2.2"/><path d="M78 4 L96 4 L96 22" fill="none" stroke="url(#g)" stroke-width="2.2"/><path d="M4 78 L4 96 L22 96" fill="none" stroke="url(#g)" stroke-width="2.2"/><path d="M78 96 L96 96 L96 78" fill="none" stroke="url(#g)" stroke-width="2.2"/><line x1="27" y1="21" x2="27" y2="79" stroke="url(#g)" stroke-width="10"/><line x1="73" y1="21" x2="73" y2="79" stroke="url(#g)" stroke-width="10"/><line x1="27" y1="21" x2="73" y2="79" stroke="url(#g)" stroke-width="10"/><rect x="42" y="42" width="12" height="12" fill="#0d0a09"/></svg></div><h2>Want this for <em>yours?</em></h2><div class="word">NEXT<span>BYT</span></div><div class="url">nextbyt.uk</div><div class="sub">Websites, Shopify and brands. Nottingham.</div></div>
+<script>const cl=x=>Math.max(0,Math.min(1,x));const oc=x=>1-Math.pow(1-x,3);const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const ob=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+function show(id,a,b,t){const el=document.getElementById(id);const v=t>=a&&t<b;el.style.opacity=v?Math.min(cl((t-a)/0.25),1-cl((t-(b-0.3))/0.3)):0;return v}
+function up(el,p,d=80){el.style.transform=`translateY(${(1-p)*d}px)`;el.style.opacity=p}
+function endcard(id,a,t){const el=document.getElementById(id);[...el.children].forEach((c,i)=>{const q=i==0?ob(cl((t-a)/0.6)):oc(cl((t-a-0.25-i*0.18)/0.5));
+ if(i==0){c.style.transform=`scale(${0.4+0.6*q}) rotate(${(1-q)*-20}deg)`;c.style.opacity=cl(q*1.2)} else up(c,q,60)})}
+
+window.renderFrame=function(t){
+ document.getElementById('glow').style.transform=`translate(${Math.sin(t*.5)*80}px,${Math.cos(t*.4)*120}px)`;
+ if(show('s1',0,2.4,t)){[...document.querySelectorAll('#s1 .tag,#s1 h1 span')].forEach((c,i)=>up(c,oc(cl((t-0.1-i*0.2)/0.5)),110))}
+ if(show('s2',2.4,10.2,t)){
+  const s=document.getElementById('s2');s.style.transform=`translateY(${(1-oc(cl((t-2.4)/0.6)))*120}px)`;
+  const w=io(cl((t-4.4)/1.4));document.getElementById('nw').style.clipPath=`inset(0 0 0 ${(1-w)*100}%)`;
+  const wp=document.getElementById('wp');wp.style.left=`${(1-w)*900-3}px`;wp.style.opacity=(w>0&&w<1)?1:0;
+  const on=w>0.5;document.getElementById('lb').className='lab'+(on?'':' on');document.getElementById('la').className='lab'+(on?' on':'');
+  [...document.getElementById('calls').children].forEach((c,i)=>up(c,oc(cl((t-6.3-i*0.45)/0.5)),40));
+ }
+ if(show('s3',10.2,99,t)) endcard('s3',10.2,t);
+};
+</script></body></html>

@@ -27,6 +27,9 @@ h2{margin-top:22px;font-weight:500;font-size:78px;line-height:1.05;letter-spacin
 .swipe{font-family:'Josefin';letter-spacing:6px;font-size:22px;color:#9a8a82;text-transform:uppercase}
 .btn{display:flex;align-items:center;gap:22px;background:linear-gradient(#ee8a4c,#cf6429);border-radius:999px;padding:14px 14px 14px 40px;font-size:30px;font-weight:500;color:#0d0a09;box-shadow:0 18px 50px rgba(207,100,41,.35)}
 .chip{width:58px;height:58px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:30px}
+.cn{font-family:'Cormorant';font-style:italic;font-weight:500;font-size:220px;line-height:1;color:#d4a070}
+.cl{margin-top:36px;font-family:'Josefin';letter-spacing:7px;font-size:24px;color:#f0a46e;text-transform:uppercase}
+.box{display:inline-flex;width:46px;height:46px;border:2px solid #cf6429;border-radius:12px;align-items:center;justify-content:center;margin-right:22px;vertical-align:middle;font-size:28px;color:#d4a070}
 .url{font-family:'Josefin';letter-spacing:5px;font-size:24px;color:#9a8a82}'''
 def slide(s,i,n):
     top=f'<div class="top"><div class="brand">{MARK}<div class="word">NEXT<span>BYT</span></div></div><div class="num">{i:02d} / {n:02d}</div></div>'
@@ -35,6 +38,9 @@ def slide(s,i,n):
         foot='<div class="foot"><div class="swipe">Swipe &rarr;</div><div class="url">NEXTBYT.UK</div></div>'
     elif s['kind']=='myth':
         mid=f'<div class="mid"><div class="myth">Myth</div><div class="mq">{s["myth"]}</div><div class="rule"></div><div class="fact">Fact</div><h2>{s["h2"]}</h2><div class="fx">{s["fx"]}</div></div>'
+        foot='<div class="foot"><div class="swipe">Swipe &rarr;</div><div class="url">NEXTBYT.UK</div></div>'
+    elif s['kind']=='check':
+        mid=f'<div class="mid"><div class="cn">{s["n"]}</div><div class="cl"><span class="box">&#10003;</span>{s.get("label","Check")}</div><h2>{s["h2"]}</h2><div class="fx">{s["fx"]}</div></div>'
         foot='<div class="foot"><div class="swipe">Swipe &rarr;</div><div class="url">NEXTBYT.UK</div></div>'
     else:
         mid=f'<div class="mid"><div class="tag">{s["tag"]}</div><h1 style="font-size:104px">{s["h1"]}</h1><div class="sub">{s["sub"]}</div></div>'

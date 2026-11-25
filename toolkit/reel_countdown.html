@@ -1,0 +1,49 @@
+<html><head><style>@font-face{font-family:'Cormorant';src:url(cormorant-garamond-latin-500-italic.woff2);font-style:italic;font-weight:500}
+@font-face{font-family:'Josefin';src:url(josefin-sans-latin-300-normal.woff2);font-weight:300}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;background:#0d0a09;color:#f5f0ea;font-family:'DM Sans';overflow:hidden;position:relative}
+#glow{position:absolute;width:1400px;height:1400px;border-radius:50%;background:radial-gradient(circle,rgba(207,100,41,.26),rgba(207,100,41,0) 62%);left:-160px;top:300px}
+.scene{position:absolute;inset:0;opacity:0}
+em{font-family:'Cormorant';font-style:italic;font-weight:500;color:#d4a070;font-size:1.12em;letter-spacing:-2px}
+.tag{font-family:'Josefin';font-weight:300;letter-spacing:10px;font-size:34px;color:#f0a46e;text-transform:uppercase}
+.endc{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 90px}
+.endc h2{font-weight:500;font-size:120px;line-height:1.05;letter-spacing:-4px;margin-top:70px}
+.word{font-family:'Josefin';font-weight:300;letter-spacing:14px;font-size:56px;color:#fff;margin-top:40px}.word span{color:#d4a070}
+.url{margin-top:70px;background:linear-gradient(#ee8a4c,#cf6429);color:#0d0a09;border-radius:999px;padding:26px 60px;font-size:48px;font-weight:500;box-shadow:0 20px 60px rgba(207,100,41,.4)}
+.sub{margin-top:40px;font-size:36px;font-weight:300;color:#9a8a82}
+
+#s1{display:flex;flex-direction:column;justify-content:center;padding:0 90px}
+#s1 h1{font-weight:500;font-size:140px;line-height:1.05;letter-spacing:-5px;margin-top:30px}
+.it{display:flex;flex-direction:column;justify-content:center;padding:0 90px}
+.n{font-family:'DM Sans';font-weight:500;font-size:460px;line-height:.9;letter-spacing:-20px;color:transparent;-webkit-text-stroke:3px #d4a070}
+.it .tag{margin-top:70px}
+.it h2{margin-top:26px;font-weight:500;font-size:96px;line-height:1.05;letter-spacing:-3.5px}
+.it p{margin-top:36px;font-size:40px;font-weight:300;line-height:1.4;color:#9a8a82;max-width:860px}
+#prog{position:absolute;left:90px;right:90px;bottom:150px;display:flex;gap:16px;opacity:0}
+#prog div{flex:1;height:6px;border-radius:3px;background:#2a2018;overflow:hidden}#prog div i{display:block;height:100%;width:0;background:linear-gradient(90deg,#cf6429,#d4a070)}
+</style></head><body><div id="glow"></div>
+<div class="scene" id="s1"><div class="tag">Getting found</div><h1><span style="display:block">Why Google</span><span style="display:block">can't <em>find you.</em></span></h1></div>
+<div class="scene it" id="i3"><div class="n">3</div><div class="tag">Page titles</div><h2>Your pages have no <em>clear titles.</em></h2><p>Every page needs its own title saying what it is and where you are.</p></div>
+<div class="scene it" id="i2"><div class="n">2</div><div class="tag">Google Business Profile</div><h2>You're missing from <em>Maps.</em></h2><p>A free Google Business Profile is how locals find you nearby.</p></div>
+<div class="scene it" id="i1"><div class="n">1</div><div class="tag">Answers</div><h2>Nothing answers <em>real questions.</em></h2><p>Google and AI search favour pages that answer what customers actually ask.</p></div>
+<div id="prog"><div><i></i></div><div><i></i></div><div><i></i></div></div>
+<div class="scene endc" id="s5"><div><svg viewBox="0 0 100 100" width="200" height="200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#eacca8"/><stop offset="50%" stop-color="#d4a070"/><stop offset="100%" stop-color="#a86030"/></linearGradient></defs><path d="M4 22 L4 4 L22 4" fill="none" stroke="url(#g)" stroke-width="2.2"/><path d="M78 4 L96 4 L96 22" fill="none" stroke="url(#g)" stroke-width="2.2"/><path d="M4 78 L4 96 L22 96" fill="none" stroke="url(#g)" stroke-width="2.2"/><path d="M78 96 L96 96 L96 78" fill="none" stroke="url(#g)" stroke-width="2.2"/><line x1="27" y1="21" x2="27" y2="79" stroke="url(#g)" stroke-width="10"/><line x1="73" y1="21" x2="73" y2="79" stroke="url(#g)" stroke-width="10"/><line x1="27" y1="21" x2="73" y2="79" stroke="url(#g)" stroke-width="10"/><rect x="42" y="42" width="12" height="12" fill="#0d0a09"/></svg></div><h2>Let's get you <em>found.</em></h2><div class="word">NEXT<span>BYT</span></div><div class="url">nextbyt.uk</div><div class="sub">Or DM us CHECK for a free website check</div></div>
+<script>const cl=x=>Math.max(0,Math.min(1,x));const oc=x=>1-Math.pow(1-x,3);const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const ob=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+function show(id,a,b,t){const el=document.getElementById(id);const v=t>=a&&t<b;el.style.opacity=v?Math.min(cl((t-a)/0.25),1-cl((t-(b-0.3))/0.3)):0;return v}
+function up(el,p,d=80){el.style.transform=`translateY(${(1-p)*d}px)`;el.style.opacity=p}
+function endcard(id,a,t){const el=document.getElementById(id);[...el.children].forEach((c,i)=>{const q=i==0?ob(cl((t-a)/0.6)):oc(cl((t-a-0.25-i*0.18)/0.5));
+ if(i==0){c.style.transform=`scale(${0.4+0.6*q}) rotate(${(1-q)*-20}deg)`;c.style.opacity=cl(q*1.2)} else up(c,q,60)})}
+
+const IT=[['i3',2.4,5.2],['i2',5.2,8.0],['i1',8.0,10.8]];
+window.renderFrame=function(t){
+ document.getElementById('glow').style.transform=`translate(${Math.sin(t*.5)*80}px,${Math.cos(t*.4)*120}px)`;
+ if(show('s1',0,2.4,t)){[...document.querySelectorAll('#s1 .tag,#s1 h1 span')].forEach((c,i)=>up(c,oc(cl((t-0.1-i*0.2)/0.5)),110))}
+ const pr=document.getElementById('prog');pr.style.opacity=(t>=2.4&&t<10.8)?1:0;
+ IT.forEach(([id,a,b],k)=>{pr.children[k].firstChild.style.width=(cl((t-a)/(b-a))*100)+'%';
+  if(show(id,a,b,t)){const el=document.getElementById(id);const ch=[...el.children];
+   const q=oc(cl((t-a)/0.45));ch[0].style.transform=`scale(${1.5-0.5*q}) translateX(${(1-q)*-60}px)`;ch[0].style.transformOrigin='left center';ch[0].style.opacity=q;
+   ch.slice(1).forEach((c,i)=>up(c,oc(cl((t-a-0.3-i*0.18)/0.5)),70));}});
+ if(show('s5',10.8,99,t)) endcard('s5',10.8,t);
+};
+</script></body></html>

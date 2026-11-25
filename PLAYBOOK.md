@@ -28,7 +28,9 @@ Design: polished and editorial. Use the brand colours and fonts, but vary compos
 - Carousels: write a JSON like toolkit/myths.json and run `python3 carousel.py file.json` (slides 1080x1350; post all slides as multiple image assets in one Buffer post).
 - Images: write a week JSON like toolkit/week1.json, then in toolkit/ replace TOOLKIT_DIR with the real path and run `python3 build.py weekN.json` (1080x1350 PNG, Chrome at /usr/bin/google-chrome). Check a contact sheet before uploading.
 - Music: every reel gets music. If toolkit/music/ has licensed free tracks (Pixabay or YouTube Audio Library, sent by Rishitha), pick one that fits and trim it with a fade; otherwise generate an original track with `python3 music.py bed.wav <seconds> <bpm> <seed>` (vary bpm 85 to 120 and seed each time). Mux with ffmpeg: -c:v copy -c:a aac -b:a 160k -shortest. Never use copyrighted or trending commercial songs.
-- Reel: edit the scene text in toolkit/reel.html and run `python3 render_reel.py` (writes reel.mp4). Check frames before uploading.
+- Carousel slide kinds: cover, myth, check (big number + ticked label + headline, for checklists), end.
+- Alternative single-image layouts: `python3 single.py weekN.json` with layout "date" (framed big date, for calendar moments) or "dm" (DM chat mockup, for the free website check). See toolkit/week2.json.
+- Reel: edit the scene text in toolkit/reel.html (kinetic type), reel_beforeafter.html (browser wipe reveal of an invented demo site) or reel_countdown.html (3-2-1 countdown with progress bar), then run `python3 render_reel.py <file.html> <out.mp4> <seconds>`. Frames are saved every second to /tmp/fNNNN.jpg; check them before uploading.
 - Upload to this repo under YYYY/MM/YYYY-MM-DD-slug.ext, push to main, then use https://raw.githubusercontent.com/rishluck/nextbyt-media/main/<path> as the Buffer asset URL. Confirm HTTP 200 first.
 - Schedule with Buffer create_post, mode customScheduled, dueAt YYYY-MM-DDT12:00:00 with the London offset (+00:00 in winter, +01:00 in summer).
 - Add each post to POSTED.md.
