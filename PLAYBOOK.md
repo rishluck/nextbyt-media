@@ -7,14 +7,17 @@ Claude makes and publishes every NextByt post. Rishitha does not make posts.
 - Instagram @nextbyt_web: 6b071add8541f09ecba05a2c (metadata.instagram.type post / reel, shouldShareToFeed true)
 - TikTok @nextbyt: 6b071ba68541f09ecba062a8 (metadata.tiktok.title; image or video asset)
 
-## Cadence
-5 posts a week, Monday to Friday, 12:00 Europe/London, same post on all three channels with captions adapted:
-- Mon: website or branding tip
-- Tue: what we do / service spotlight / client showcase
-- Wed: short video reel (10 to 15 s, 1080x1920)
-- Thu: small business advice (branding, Shopify, getting found on Google)
-- Fri: offer or behind the scenes
-English only. British spelling, £, no em dashes, no emoji, no hype words. One call to action pointing to nextbyt.uk (Instagram: "link in bio").
+## Cadence and variety (Rishitha wants it different every week, more professional, following current trends)
+5 posts a week, Monday to Friday, 12:00 Europe/London, on all three channels with captions adapted per platform.
+Every week MUST mix formats. Never use the same layout two days running. Each week include at least:
+- 2 short videos (reels): kinetic type, "3 mistakes" countdowns, before/after website redesign reveals of invented demo sites, quick screen-style walkthroughs, Christmas or seasonal countdowns. Short-form video is the top format, so lean on it.
+- 1 carousel (5 to 7 slides, toolkit/carousel.py): myth vs fact, step-by-step guides, checklists, "save this" reference posts. Carousels drive saves and shares.
+- 1 or 2 single images, rotating layouts: big quote/stat card, checklist, price card, device mockup of an invented demo site, "this or that" comparison.
+Rotate themes: website tips, branding, Shopify, getting found on Google and AI search, social media tips, small business advice, behind the scenes of the design process, seasonal and UK calendar moments (Christmas, New Year, Valentine's, Small Business Saturday, etc.).
+Before planning each week: run a web search for current Instagram/TikTok trends, formats and UK small business news for that week, and use 1 or 2 that genuinely fit a premium design studio. Skip trends that are silly, off-brand or use copyrighted audio/characters.
+Start a running series when it fits (for example a weekly "Website fix" tip) so followers come back.
+End captions with a question or "save this" prompt to drive comments and saves. English only. British spelling, £, no em dashes, no emoji, no hype words. One call to action pointing to nextbyt.uk (Instagram: "link in bio").
+Design: polished and editorial. Use the brand colours and fonts, but vary composition (centred, split, big number, full-bleed mockup). Always check a contact sheet; fix crowding, edge-touching text or weak hierarchy before posting.
 
 ## Rules
 - Never name a client or show client work without Rishitha's yes. Never quote prices other than Starter £399 and Growth £899 (Enterprise custom). Never invent offers, discounts or free services.
@@ -22,6 +25,7 @@ English only. British spelling, £, no em dashes, no emoji, no hype words. One c
 - Do not repeat a topic listed in POSTED.md.
 
 ## How to build
+- Carousels: write a JSON like toolkit/myths.json and run `python3 carousel.py file.json` (slides 1080x1350; post all slides as multiple image assets in one Buffer post).
 - Images: write a week JSON like toolkit/week1.json, then in toolkit/ replace TOOLKIT_DIR with the real path and run `python3 build.py weekN.json` (1080x1350 PNG, Chrome at /usr/bin/google-chrome). Check a contact sheet before uploading.
 - Reel: edit the scene text in toolkit/reel.html and run `python3 render_reel.py` (writes reel.mp4). Check frames before uploading.
 - Upload to this repo under YYYY/MM/YYYY-MM-DD-slug.ext, push to main, then use https://raw.githubusercontent.com/rishluck/nextbyt-media/main/<path> as the Buffer asset URL. Confirm HTTP 200 first.
