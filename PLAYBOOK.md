@@ -27,6 +27,7 @@ Design: polished and editorial. Use the brand colours and fonts, but vary compos
 ## How to build
 - Carousels: write a JSON like toolkit/myths.json and run `python3 carousel.py file.json` (slides 1080x1350; post all slides as multiple image assets in one Buffer post).
 - Images: write a week JSON like toolkit/week1.json, then in toolkit/ replace TOOLKIT_DIR with the real path and run `python3 build.py weekN.json` (1080x1350 PNG, Chrome at /usr/bin/google-chrome). Check a contact sheet before uploading.
+- Music: every reel gets music. If toolkit/music/ has licensed free tracks (Pixabay or YouTube Audio Library, sent by Rishitha), pick one that fits and trim it with a fade; otherwise generate an original track with `python3 music.py bed.wav <seconds> <bpm> <seed>` (vary bpm 85 to 120 and seed each time). Mux with ffmpeg: -c:v copy -c:a aac -b:a 160k -shortest. Never use copyrighted or trending commercial songs.
 - Reel: edit the scene text in toolkit/reel.html and run `python3 render_reel.py` (writes reel.mp4). Check frames before uploading.
 - Upload to this repo under YYYY/MM/YYYY-MM-DD-slug.ext, push to main, then use https://raw.githubusercontent.com/rishluck/nextbyt-media/main/<path> as the Buffer asset URL. Confirm HTTP 200 first.
 - Schedule with Buffer create_post, mode customScheduled, dueAt YYYY-MM-DDT12:00:00 with the London offset (+00:00 in winter, +01:00 in summer).
