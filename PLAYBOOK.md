@@ -5,10 +5,10 @@ Claude makes and publishes every NextByt post. Rishitha does not make posts.
 ## Accounts (Buffer org "My organization", id 6b0719186a77081e39833051, free plan: 10 queued posts per channel)
 - Facebook page "NextByt Digital Studio": 6b071a7b8541f09ecba05605 (metadata.facebook.type post / reel)
 - Instagram @nextbyt_web: 6b071add8541f09ecba05a2c (metadata.instagram.type post / reel, shouldShareToFeed true)
-- TikTok @nextbyt: 6b071ba68541f09ecba062a8 (metadata.tiktok.title; image or video asset)
+- TikTok @nextbyt: 6b071ba68541f09ecba062a8. DO NOT POST OR CHANGE ANYTHING ON TIKTOK (Rishitha, 25 Nov 2026). Facebook and Instagram only.
 
 ## Cadence and variety (Rishitha wants it different every week, more professional, following current trends)
-5 posts a week, Monday to Friday, 12:00 Europe/London, on all three channels with captions adapted per platform.
+5 posts a week, Monday to Friday, 12:00 Europe/London, on Facebook and Instagram only with captions adapted per platform.
 Every week MUST mix formats. Never use the same layout two days running. Each week include at least:
 - 2 short videos (reels): kinetic type, "3 mistakes" countdowns, before/after website redesign reveals of invented demo sites, quick screen-style walkthroughs, Christmas or seasonal countdowns. Short-form video is the top format, so lean on it.
 - 1 carousel (5 to 7 slides, toolkit/carousel.py): myth vs fact, step-by-step guides, checklists, "save this" reference posts. Carousels drive saves and shares.
