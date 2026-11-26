@@ -34,3 +34,9 @@ Design: polished and editorial. Use the brand colours and fonts, but vary compos
 - Upload to this repo under YYYY/MM/YYYY-MM-DD-slug.ext, push to main, then use https://raw.githubusercontent.com/rishluck/nextbyt-media/main/<path> as the Buffer asset URL. Confirm HTTP 200 first.
 - Schedule with Buffer create_post, mode customScheduled, dueAt YYYY-MM-DDT12:00:00 with the London offset (+00:00 in winter, +01:00 in summer).
 - Add each post to POSTED.md.
+
+## Canva copies (Rishitha, 26 Nov 2026: keep building here, and also save editable copies in Canva each week)
+- Canva folder "NextByt Social": FAHcBi__aLc.
+- After building, convert each image or carousel's rendered HTML into one file under canva/ (one `<div data-document-role="page">` per slide, fonts as 'DM Sans', 'Cormorant Garamond', 'Josefin Sans'; scope only the bare `body{` rule, not `.body{`). Push, then import with Canva import-design-from-url using the commit-SHA raw URL (the main-branch raw URL is cached for minutes). Name it "YYYY-MM-DD Topic (NextByt)" and move it into the folder.
+- Upload reels with upload-asset-from-url and move them into the folder too.
+- Check the Canva thumbnails. Known importer limits: the gold Cormorant accent word comes in as DM Sans italic, and some text boxes need nudging. The Buffer posts always use the repo PNG/MP4, not the Canva copy.
